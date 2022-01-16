@@ -24,7 +24,6 @@ app.post( '/api/messages', async (req, res) =>  {
   await pusher.trigger("chat", "message", {
     username: req.body.username,
     message: req.body.message,
-    active: req.body.active
   });
   res.json([]);
 })
